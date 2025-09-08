@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { ConvexClientProvider } from "./providers";
+import { Providers } from "./providers";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${outfit.variable} font-sans`}>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
 
